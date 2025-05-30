@@ -12,6 +12,7 @@ import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 import BeneficiariesList from "./pages/beneficiaries/list";
 import NewApplicant from "./pages/beneficiaries/new-applicant";
+import BeneficiaryProfile from "./pages/beneficiaries/beneficiary-profile";
 
 
 const icon = {
@@ -27,25 +28,8 @@ export const routes = [
         name: "dashboard",
         path: "/home",
         element: <Home />,
-      },
-      {
-        icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
-        element: <Profile />,
-      },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
-      },
-      {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
-        element: <Notifications />,
-      },
+      }
+      
     ],
   },
   {
@@ -55,20 +39,25 @@ export const routes = [
       {
         icon: <UsersIcon {...icon} />,
         name: "beneficiaries",
-        path: "/list",
+        path: "/beneficiaries/list",
         element: <BeneficiariesList />,
+        showInSidenav: true,
       },
       {
           icon: <UserPlusIcon {...icon} />,
           name: "new applicant",
-          path: "/new-applicant",
+          path: "/beneficiaries/new-applicant",
           element: <NewApplicant />,
-      },
+          showInSidenav: true,
+
+      }
+      ,
       {
-        icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
-        element: <Profile />,
+          icon: <UserCircleIcon {...icon} />,
+          name: "beneficiary profile",
+          path: "/beneficiaries/beneficiary-profile",
+          element: <BeneficiaryProfile />,
+          showInSidenav: false,
       }
     ],
   },
@@ -81,12 +70,14 @@ export const routes = [
         name: "sign in",
         path: "/sign-in",
         element: <SignIn />,
+        showInSidenav: true,
       },
       {
         icon: <RectangleStackIcon {...icon} />,
         name: "sign up",
         path: "/sign-up",
         element: <SignUp />,
+        showInSidenav: true,
       },
     ],
   },

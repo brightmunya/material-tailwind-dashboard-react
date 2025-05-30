@@ -64,11 +64,11 @@ export function DashboardNavbar() {
               color="blue-gray"
               className="font-normal"
             >
-              {page}
+              {page.replace("-", " ")}
             </Typography>
           </Breadcrumbs>
           <Typography variant="h5" color="blue-gray">
-            {page}
+            {page.replace("-", " ")}
           </Typography>
         </div>
         <div className="flex items-center">
