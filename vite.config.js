@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/material-tailwind-dashboard-react",
   resolve: {
-    alias: [{ find: "@", replacement: "./src" }],
+    alias: [{ find: "@", replacement: "/src" }],
   },
-  base: "/material-tailwind-dashboard-react",	
+  
 });
