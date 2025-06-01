@@ -9,18 +9,18 @@ export const statisticsCardsData = [
   {
     color: "gray",
     icon: BanknotesIcon,
-    title: "Today's Money",
+    title: "Total Disburded this month",
     value: "$53k",
     footer: {
       color: "text-green-500",
       value: "+55%",
-      label: "than last week",
+      label: "than last month",
     },
   },
   {
     color: "gray",
     icon: UsersIcon,
-    title: "Today's Users",
+    title: "Beneficiaries",
     value: "2,300",
     footer: {
       color: "text-green-500",
@@ -31,18 +31,18 @@ export const statisticsCardsData = [
   {
     color: "gray",
     icon: UserPlusIcon,
-    title: "New Clients",
+    title: "Applicants",
     value: "3,462",
     footer: {
       color: "text-red-500",
       value: "-2%",
-      label: "than yesterday",
+      label: "than month",
     },
   },
   {
     color: "gray",
     icon: ChartBarIcon,
-    title: "Sales",
+    title: "Amount Disburded Today",
     value: "$103,430",
     footer: {
       color: "text-green-500",

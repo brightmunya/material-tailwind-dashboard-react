@@ -7,12 +7,14 @@ import {
   RectangleStackIcon,
   UserPlusIcon,
   UsersIcon,
+  UserGroupIcon,
+  DocumentChartBarIcon,
+  ClipboardDocumentCheckIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
-import BeneficiariesList from "./pages/beneficiaries/list";
-import NewApplicant from "./pages/beneficiaries/new-applicant";
-import BeneficiaryProfile from "./pages/beneficiaries/beneficiary-profile";
+import {ZakaahReport, PEPFARReport} from "@/pages/reports";
+import {BeneficiariesList, NewApplicant, BeneficiaryProfile, Applications} from "@/pages/beneficiaries";
 
 
 const icon = {
@@ -28,6 +30,7 @@ export const routes = [
         name: "dashboard",
         path: "/home",
         element: <Home />,
+        showInSidenav: true,
       }
       
     ],
@@ -41,6 +44,13 @@ export const routes = [
         name: "beneficiaries",
         path: "/beneficiaries/list",
         element: <BeneficiariesList />,
+        showInSidenav: true,
+      },
+      {
+        icon: <UserGroupIcon {...icon} />,
+        name: "applications",
+        path: "/beneficiaries/applications",
+        element: <Applications />,
         showInSidenav: true,
       },
       {
@@ -62,6 +72,26 @@ export const routes = [
     ],
   },
   {
+    title: "reports",
+    layout: "reports",
+    pages: [
+      {
+        icon: <DocumentChartBarIcon {...icon} />,
+        name: "zakaah",
+        path: "/reports/zakaah",
+        element: <ZakaahReport />,
+        showInSidenav: true,
+      },
+      {
+        icon: <ClipboardDocumentCheckIcon {...icon} />,
+        name: "pepfar",
+        path: "/reports/pepfar",
+        element: <PEPFARReport />,
+        showInSidenav: true,
+      },
+    ],
+  },
+  {
     title: "auth pages",
     layout: "auth",
     pages: [
@@ -77,7 +107,7 @@ export const routes = [
         name: "sign up",
         path: "/sign-up",
         element: <SignUp />,
-        showInSidenav: true,
+        showInSidenav: false,
       },
     ],
   },

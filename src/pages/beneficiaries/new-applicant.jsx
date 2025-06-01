@@ -11,7 +11,7 @@ import {
   } from "@material-tailwind/react";
 import { useState } from "react";
 
-const NewApplicant = () => {
+export function NewApplicant() {
   const [wizardPage, setWizardPage] = useState(1);
   const [newBeneficiary, setNewBeneficiary] = useState({
     typeOfAid: "",
@@ -26,20 +26,20 @@ const NewApplicant = () => {
   return (
     <div className="mt-12 mb-8 flex flex-col gap-12">
     <Card>
-      <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
+      <CardHeader variant="gradient" color="gray" className="mb-4 p-4">
         <Typography variant="h6" color="white">
           New Applicant
         </Typography>
       </CardHeader>
       <CardBody>
         <div className="wizard-new-applicant">
-          <div className="wizard-pages mb-4">  
+          <div className="wizard-pages">  
             <div className="wizard-page-2">
-              <Typography variant="h6" color="black">
+              <Typography variant="h6" color="black" className="mb-2">
                 Beneficiary Details
               </Typography>
               <div className="flex flex-col gap-4">
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid grid-cols-2 gap-3 mb-2">
                     <div>
                       <Select
                         type="text"

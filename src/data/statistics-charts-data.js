@@ -5,7 +5,7 @@ const websiteViewsChart = {
   height: 220,
   series: [
     {
-      name: "Views",
+      name: "Home Visits",
       data: [50, 20, 10, 22, 50, 10, 40],
     },
   ],
@@ -30,7 +30,7 @@ const dailySalesChart = {
   height: 220,
   series: [
     {
-      name: "Sales",
+      name: "Applications",
       data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
     },
   ],
@@ -65,7 +65,7 @@ const completedTaskChart = {
   height: 220,
   series: [
     {
-      name: "Sales",
+      name: "Beneficiaries",
       data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
     },
   ],
@@ -107,22 +107,22 @@ const completedTasksChart = {
 export const statisticsChartsData = [
   {
     color: "white",
-    title: "Website View",
-    description: "Last Campaign Performance",
-    footer: "campaign sent 2 days ago",
+    title: "Home Visits",
+    description: "Number of home visits this week",
+    footer: "updated 2 min ago",
     chart: websiteViewsChart,
   },
   {
     color: "white",
-    title: "Daily Sales",
-    description: "15% increase in today sales",
-    footer: "updated 4 min ago",
+    title: "Applications",
+    description: "15% increase in applications year to date",
+    footer: "updated 1 month ago",
     chart: dailySalesChart,
   },
   {
     color: "white",
-    title: "Completed Tasks",
-    description: "Last Campaign Performance",
+    title: "Beneficiaries",
+    description: "Number of active beneficiaries over the past year",
     footer: "just updated",
     chart: completedTasksChart,
   },

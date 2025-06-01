@@ -83,7 +83,7 @@ export function SignIn() {
               </a>
             </Typography>
           </div>
-          <div className="space-y-4 mt-8">
+          <div className="space-y-4 mt-8 hidden">
             <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1156_824)">
@@ -112,10 +112,10 @@ export function SignIn() {
         </form>
 
       </div>
-      <div className="w-2/5 h-full hidden lg:block">
+      <div className="w-2/5 h-full mt-[5%] hidden lg:block">
         <img
-          src="/img/pattern.png"
-          className="h-full w-full object-cover rounded-3xl"
+          src="/img/4.png"
+          className="h-full  object-cover rounded-3xl"
         />
       </div>
 

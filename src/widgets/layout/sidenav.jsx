@@ -22,18 +22,19 @@ export function Sidenav({ brandImg, brandName, routes }) {
     <aside
       className={`${sidenavTypes[sidenavType]} ${
         openSidenav ? "translate-x-0" : "-translate-x-80"
-      } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100`}
+      } overflow-y-scroll fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100`}
     >
       <div
         className={`relative`}
       >
-        <Link to="/" className="py-6 px-8 text-center">
-          <Typography
-            variant="h6"
-            color={sidenavType === "dark" ? "white" : "blue-gray"}
-          >
-            {brandName}
-          </Typography>
+        <Link to="/" className="py-3 px-8 ">
+          <div className="flex items-center gap-4 px-4">
+            <img src={brandImg} alt="Brand Logo" className="h-8" />
+            <Typography variant="h5" color={sidenavType === "dark" ? "white" : "blue-gray"}>
+              {brandName}
+            </Typography>
+          </div>
+         
         </Link>
         <IconButton
           variant="text"
@@ -97,8 +98,8 @@ export function Sidenav({ brandImg, brandName, routes }) {
 }
 
 Sidenav.defaultProps = {
-  brandImg: "./img/logo-ct.png",
-  brandName: "Aid Tracker",
+  brandImg: "./img/icon_90x90.jpg",
+  brandName: "Tzedekah Alms",
 };
 
 Sidenav.propTypes = {

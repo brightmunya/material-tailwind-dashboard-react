@@ -7,16 +7,17 @@ import {
   Chip,
   Tooltip,
   Progress,
+  Button,
 } from "@material-tailwind/react";
 import { NavLink, Link } from "react-router-dom";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
+import { EllipsisVerticalIcon, ArrowTopRightOnSquareIcon, ArchiveBoxIcon } from "@heroicons/react/24/outline";
 import { authorsTableData, beneficiariesTableData } from "@/data";
 
-const BeneficiariesList = () => {
+export function BeneficiariesList() {
   return (
     <div className="mt-12 mb-8 flex flex-col gap-12">
       <Card>
-        <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
+        <CardHeader variant="gradient" color="gray" className="mb-4 p-4">
           <Typography variant="h6" color="white">
             Beneficiaries
           </Typography>
@@ -44,6 +45,12 @@ const BeneficiariesList = () => {
               {beneficiariesTableData.map(
                 ({ photo, name, email, employment, status, dateCreated }, key) => {
                   const className = `py-3 px-5 ${
+                    key === beneficiariesTableData.length - 1
+                      ? ""
+                      : "border-b border-blue-gray-50"
+                  }`;
+
+                  const classNameLastCol = `px-0 ${
                     key === beneficiariesTableData.length - 1
                       ? ""
                       : "border-b border-blue-gray-50"
@@ -90,19 +97,25 @@ const BeneficiariesList = () => {
                           className="py-0.5 px-2 text-[11px] font-medium w-fit"
                         />
                       </td>
-                      <td className={className}>
-                        <Link to={`/dashboard/beneficiaries/beneficiary-profile`}>
-                          <Typography
-                            className="text-xs font-semibold text-blue-gray-600"
-                          >
-                            Open
-                          </Typography>
-                        </Link>
-                        <Typography
-                          className="text-xs font-semibold text-red-600"
-                        >
-                          Delete
-                        </Typography>
+                      <td className={classNameLastCol}>
+                        <div className="flex">
+                          <Link className="p-2 rounded-l-lg hover:shadow-md" to={`/dashboard/beneficiaries/beneficiary-profile`}>
+                            <Typography
+                              className="text-xs font-semibold text-blue-gray-600"
+                            >
+                              <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                            </Typography>
+                          </Link>
+                          <Button className="p-1 bg-transparent shadow-none rounded-l-none p-2">
+                            <Typography
+                              className="text-xs font-semibold text-red-600"
+                            >
+                              <ArchiveBoxIcon className="h-4 w-4" />
+                            </Typography>
+                          </Button>
+                        </div>
+                        
+                        
                       </td>
                     </tr>
                   );
