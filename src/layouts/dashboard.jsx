@@ -19,7 +19,7 @@ export function Dashboard() {
       <Sidenav
         routes={routes}
         brandImg={
-          sidenavType === "dark" ? "./img/icon_60x60_dark.png" : "./img/icon_60x60.jpg"
+          sidenavType === "dark" ? "img/icon_60x60_dark.png" : "img/icon_60x60.jpg"
         }
       />
       <div className="p-4 xl:ml-80">
