@@ -4,7 +4,7 @@ export const beneficiariesTableData = [
     name: "John Doe",
     age: 30,
     location: "Pinetown",
-    photo:"/img/team-2.jpeg",
+    photo:"img/team-2.jpeg",
     employment:{
       status: "Employed",
       profession: "Software Engineer",
@@ -25,7 +25,7 @@ export const beneficiariesTableData = [
     name: "Jane Smith",
     age: 28,
     location: "Durban",
-    photo:"/img/team-1.jpeg",
+    photo:"img/team-1.jpeg",
     employment:{
       status: "Unemployed",
       profession: "N/A",
@@ -46,7 +46,7 @@ export const beneficiariesTableData = [
     name: "Alice Johnson",
     age: 35,
     location: "Pinetown",
-    photo:"/img/team-4.jpeg",
+    photo:"img/team-4.jpeg",
     employment:{
       status: "Employed",
       profession: "Data Analyst",
@@ -67,7 +67,7 @@ export const beneficiariesTableData = [
     name: "Bob Brown",
     age: 40,
     location: "Durban",
-    photo:"/img/team-3.jpeg",
+    photo:"img/team-3.jpeg",
     employment:{
       status: "Employed",
       profession: "Project Manager",
@@ -87,7 +87,7 @@ export const beneficiariesTableData = [
     name: "Charlie Davis",
     age: 32,
     location: "Pinetown",
-    photo:"/img/team-4.jpeg",
+    photo:"img/team-4.jpeg",
     employment:{
       status: "Unemployed",
       profession: "N/A",
@@ -108,7 +108,7 @@ export const beneficiariesTableData = [
     name: "Eve Wilson",
     age: 29,
     location: "Durban",
-    photo:"/img/team-2.jpeg",
+    photo:"img/team-2.jpeg",
     employment:{
       status: "Employed",
       profession: "Graphic Designer",
