@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/material-tailwind-dashboard-react",
     "paths": {
       "@/*": ["/src/*"],
     },
