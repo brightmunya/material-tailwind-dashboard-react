@@ -11,10 +11,10 @@ import {
   DocumentChartBarIcon,
   ClipboardDocumentCheckIcon,
 } from "@heroicons/react/24/solid";
-import { Home } from "@/pages/dashboard";
-import { SignIn, SignUp } from "@/pages/auth";
-import {ZakaahReport, PEPFARReport} from "@/pages/reports";
-import {BeneficiariesList, NewApplicant, BeneficiaryProfile, Applications} from "@/pages/beneficiaries";
+import { Home } from "./pages/dashboard";
+import { SignIn, SignUp } from "./pages/auth";
+import {ZakaahReport, PEPFARReport} from "./pages/reports";
+import {BeneficiariesList, NewApplicant, BeneficiaryProfile, Applications} from "./pages/beneficiaries";
 
 
 const icon = {
