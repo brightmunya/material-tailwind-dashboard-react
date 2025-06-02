@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/material-tailwind-dashboard-react",
   resolve: {
-    alias: [{ find: "@", replacement: "" }],
+    alias: [{ find: "@", replacement: ".." }],
   },
   
 });
