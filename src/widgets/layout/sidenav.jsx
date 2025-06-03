@@ -98,8 +98,8 @@ export function Sidenav({ brandImg, brandName, routes }) {
 }
 
 Sidenav.defaultProps = {
-  brandImg: "./img/icon_90x90.jpg",
-  brandName: "Tzedekah Alms 1.0",
+  brandImg: "/img/icon_90x90.jpg",
+  brandName: "Charity Alms 1.0",
 };
 
 Sidenav.propTypes = {
